@@ -3,10 +3,11 @@
 %bcond_without	tests		# build without tests
 #
 Summary:	The Little Brother's Database
+Summary(pl):	The Little Brother's Database - baza danych Ma³ego Brata
 Name:		lbdb
 Version:	0.29
 Release:	0.1
-License:	- (enter GPL/GPL v2/LGPL/BSD/BSD-like/other license name here)
+License:	GPL v2+
 Group:		Applications
 Source0:	http://www.spinnaker.de/debian/%{name}_%{version}.tar.gz
 # Source0-md5:	1b29222036f564f45d22ce86284c0611
@@ -17,9 +18,16 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Lbdbq is the client program for the little brother's database. It will
 attempt to invoke various modules to gather information about persons
-matching something. E.g., it may look at a list of addresses from which you
-have received mail, it may look at YP maps, or it may try to finger
-something@<various hosts>.
+matching something. E.g., it may look at a list of addresses from
+which you have received mail, it may look at YP maps, or it may try to
+finger something@<various hosts>.
+
+%description -l pl
+Lbdbq to program kliencki do "bazy danych ma³ego brata". Próbuje on
+wywo³ywaæ ró¿ne modu³y w celu zgromadzenia informacji o osobach
+pasuj±cych do czego¶. Np. mo¿e przeszukiwaæ listy adresów z których
+otrzymali¶my pocztê, mo¿e przeszukiwaæ mapy YP, albo próbowaæ wykonaæ
+finger kto¶@<ró¿ne hosty>.
 
 %prep
 %setup -q
@@ -27,13 +35,12 @@ something@<various hosts>.
 %build
 %{__aclocal}
 %{__autoconf}
-%configure --libdir=%{_libdir}/lbdb
+%configure \
+	--libdir=%{_libdir}/lbdb
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# create directories if necessary
-#install -d $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
