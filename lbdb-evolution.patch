@@ -1,0 +1,17 @@
+--- lbdb-0.29/configure.in.orig	2005-05-03 01:57:37.000000000 +0100
++++ lbdb-0.29/configure.in	2005-05-03 02:01:00.000000000 +0100
+@@ -188,11 +188,9 @@
+ 	fi
+ fi
+ 
+-AC_PATH_PROG(EVOLUTION_ADDRESSBOOK_EXPORT, evolution-addressbook-export, "no")
+-if test "x$EVOLUTION_ADDRESSBOOK_EXPORT" != xno ; then
+-	MODULES="$MODULES m_evolution"
+-	AC_SUBST(EVOLUTION_ADDRESSBOOK_EXPORT)
+-fi
++EVOLUTION_ADDRESSBOOK_EXPORT="/usr/lib/evolution/2.2/evolution-addressbook-export"
++MODULES="$MODULES m_evolution"
++AC_SUBST(EVOLUTION_ADDRESSBOOK_EXPORT)
+ 
+ MODULES_SH=""
+ for i in $MODULES ; do
