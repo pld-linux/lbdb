@@ -11,6 +11,7 @@ License:	GPL v2+
 Group:		Applications
 Source0:	http://www.spinnaker.de/debian/%{name}_%{version}.tar.gz
 # Source0-md5:	1b29222036f564f45d22ce86284c0611
+Patch0:		%{name}-evolution.patch
 URL:		http://www.spinnaker.de/lbdb/
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -31,10 +32,10 @@ finger kto¶@<ró¿ne hosty>.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-%{__aclocal}
-%{__autoconf}
+autoreconf
 %configure \
 	--libdir=%{_libdir}/lbdb
 %{__make}
