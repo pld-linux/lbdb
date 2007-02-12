@@ -3,7 +3,7 @@
 %bcond_without	tests		# build without tests
 #
 Summary:	The Little Brother's Database
-Summary(pl):	The Little Brother's Database - baza danych Ma³ego Brata
+Summary(pl.UTF-8):   The Little Brother's Database - baza danych MaÅ‚ego Brata
 Name:		lbdb
 Version:	0.29
 Release:	0.1
@@ -23,12 +23,12 @@ matching something. E.g., it may look at a list of addresses from
 which you have received mail, it may look at YP maps, or it may try to
 finger something@<various hosts>.
 
-%description -l pl
-Lbdbq to program kliencki do "bazy danych ma³ego brata". Próbuje on
-wywo³ywaæ ró¿ne modu³y w celu zgromadzenia informacji o osobach
-pasuj±cych do czego¶. Np. mo¿e przeszukiwaæ listy adresów z których
-otrzymali¶my pocztê, mo¿e przeszukiwaæ mapy YP, albo próbowaæ wykonaæ
-finger kto¶@<ró¿ne hosty>.
+%description -l pl.UTF-8
+Lbdbq to program kliencki do "bazy danych maÅ‚ego brata". PrÃ³buje on
+wywoÅ‚ywaÄ‡ rÃ³Å¼ne moduÅ‚y w celu zgromadzenia informacji o osobach
+pasujÄ…cych do czegoÅ›. Np. moÅ¼e przeszukiwaÄ‡ listy adresÃ³w z ktÃ³rych
+otrzymaliÅ›my pocztÄ™, moÅ¼e przeszukiwaÄ‡ mapy YP, albo prÃ³bowaÄ‡ wykonaÄ‡
+finger ktoÅ›@<rÃ³Å¼ne hosty>.
 
 %prep
 %setup -q
