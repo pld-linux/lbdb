@@ -3,7 +3,7 @@
 %bcond_without	tests		# build without tests
 #
 Summary:	The Little Brother's Database
-Summary(pl.UTF-8):   The Little Brother's Database - baza danych Małego Brata
+Summary(pl.UTF-8):	The Little Brother's Database - baza danych Małego Brata
 Name:		lbdb
 Version:	0.29
 Release:	0.1
