@@ -32,7 +32,7 @@ finger ktoś@<różne hosty>.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 autoreconf
